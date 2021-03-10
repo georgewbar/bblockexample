@@ -1,0 +1,70 @@
+Classfile /C:/Users/laptop-seven/Desktop/jasitest/src/main/java/expackage/ExampleClass.class
+  Last modified 10 Mar 2021; size 409 bytes
+  MD5 checksum d7ba87d101bf71fac2b90fb4f8d53c19
+public class expackage.ExampleClass
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #6                          // expackage/ExampleClass
+  super_class: #7                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 0
+Constant pool:
+   #1 = Methodref          #7.#14         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #15.#16        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = String             #17            // x is equal to 1
+   #4 = Methodref          #18.#19        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #5 = String             #20            // x NOT eq to 1
+   #6 = Class              #21            // expackage/ExampleClass
+   #7 = Class              #22            // java/lang/Object
+   #8 = Utf8               <init>
+   #9 = Utf8               ()V
+  #10 = Utf8               Code
+  #11 = Utf8               exampleMethod
+  #12 = Utf8               (I)I
+  #13 = Utf8               StackMapTable
+  #14 = NameAndType        #8:#9          // "<init>":()V
+  #15 = Class              #23            // java/lang/System
+  #16 = NameAndType        #24:#25        // out:Ljava/io/PrintStream;
+  #17 = Utf8               x is equal to 1
+  #18 = Class              #26            // java/io/PrintStream
+  #19 = NameAndType        #27:#28        // println:(Ljava/lang/String;)V
+  #20 = Utf8               x NOT eq to 1
+  #21 = Utf8               expackage/ExampleClass
+  #22 = Utf8               java/lang/Object
+  #23 = Utf8               java/lang/System
+  #24 = Utf8               out
+  #25 = Utf8               Ljava/io/PrintStream;
+  #26 = Utf8               java/io/PrintStream
+  #27 = Utf8               println
+  #28 = Utf8               (Ljava/lang/String;)V
+{
+  public expackage.ExampleClass();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public int exampleMethod(int);
+    descriptor: (I)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: iload_1
+         1: iconst_1
+         2: if_icmpne     16
+         5: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         8: ldc           #3                  // String x is equal to 1
+        10: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        13: bipush        10
+        15: ireturn
+        16: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        19: ldc           #5                  // String x NOT eq to 1
+        21: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        24: bipush        15
+        26: ireturn
+      StackMapTable: number_of_entries = 1
+        frame_type = 16 /* same */
+}
