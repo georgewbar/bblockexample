@@ -1,0 +1,113 @@
+Classfile /C:/Users/laptop-seven/Desktop/jasitest/src/main/java/expackage/Ex3.class
+  Last modified 10 Mar 2021; size 653 bytes
+  MD5 checksum 2aa31cefe267af2fe47a5d33844d503c
+public class expackage.Ex3
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #12                         // expackage/Ex3
+  super_class: #13                        // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 0
+Constant pool:
+   #1 = Methodref          #13.#20        // java/lang/Object."<init>":()V
+   #2 = Fieldref           #21.#22        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = String             #23            // x is equal to 1
+   #4 = Methodref          #24.#25        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #5 = String             #26            // x NOT eq to 1
+   #6 = Class              #27            // java/lang/IllegalArgumentException
+   #7 = String             #28            // an exception happened
+   #8 = Class              #29            // java/lang/Exception
+   #9 = String             #30            // e IS instance of Exception
+  #10 = Methodref          #24.#31        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #11 = String             #32            // here is outside
+  #12 = Class              #33            // expackage/Ex3
+  #13 = Class              #34            // java/lang/Object
+  #14 = Utf8               <init>
+  #15 = Utf8               ()V
+  #16 = Utf8               Code
+  #17 = Utf8               exampleMethod3
+  #18 = Utf8               (I)I
+  #19 = Utf8               StackMapTable
+  #20 = NameAndType        #14:#15        // "<init>":()V
+  #21 = Class              #35            // java/lang/System
+  #22 = NameAndType        #36:#37        // out:Ljava/io/PrintStream;
+  #23 = Utf8               x is equal to 1
+  #24 = Class              #38            // java/io/PrintStream
+  #25 = NameAndType        #39:#40        // println:(Ljava/lang/String;)V
+  #26 = Utf8               x NOT eq to 1
+  #27 = Utf8               java/lang/IllegalArgumentException
+  #28 = Utf8               an exception happened
+  #29 = Utf8               java/lang/Exception
+  #30 = Utf8               e IS instance of Exception
+  #31 = NameAndType        #39:#41        // println:(Ljava/lang/Object;)V
+  #32 = Utf8               here is outside
+  #33 = Utf8               expackage/Ex3
+  #34 = Utf8               java/lang/Object
+  #35 = Utf8               java/lang/System
+  #36 = Utf8               out
+  #37 = Utf8               Ljava/io/PrintStream;
+  #38 = Utf8               java/io/PrintStream
+  #39 = Utf8               println
+  #40 = Utf8               (Ljava/lang/String;)V
+  #41 = Utf8               (Ljava/lang/Object;)V
+{
+  public expackage.Ex3();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public int exampleMethod3(int);
+    descriptor: (I)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: iload_1
+         1: iconst_1
+         2: if_icmpne     16
+         5: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         8: ldc           #3                  // String x is equal to 1
+        10: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        13: bipush        10
+        15: ireturn
+        16: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        19: ldc           #5                  // String x NOT eq to 1
+        21: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        24: goto          60
+        27: astore_2
+        28: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        31: ldc           #7                  // String an exception happened
+        33: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        36: aload_2
+        37: instanceof    #8                  // class java/lang/Exception
+        40: ifeq          51
+        43: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        46: ldc           #9                  // String e IS instance of Exception
+        48: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        51: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        54: aload_2
+        55: invokevirtual #10                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        58: aload_2
+        59: athrow
+        60: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        63: ldc           #11                 // String here is outside
+        65: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        68: bipush        15
+        70: ireturn
+      Exception table:
+         from    to  target type
+             0    15    27   Class java/lang/IllegalArgumentException
+            16    24    27   Class java/lang/IllegalArgumentException
+      StackMapTable: number_of_entries = 4
+        frame_type = 16 /* same */
+        frame_type = 74 /* same_locals_1_stack_item */
+          stack = [ class java/lang/IllegalArgumentException ]
+        frame_type = 252 /* append */
+          offset_delta = 23
+          locals = [ class java/lang/IllegalArgumentException ]
+        frame_type = 250 /* chop */
+          offset_delta = 8
+}

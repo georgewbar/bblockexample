@@ -10,8 +10,9 @@ public class MainTwo {
 
     public static void main(String[] args) throws NotFoundException, CannotCompileException, IOException, BadBytecode {
         ClassPool pool = ClassPool.getDefault();
-        pool.insertClassPath("src/main/java");
-        CtClass cc = pool.get("expackage.Ex2");
+//        pool.insertClassPath("src/main/java");
+        pool.insertClassPath("dump");
+        CtClass cc = pool.get("expackage.Ex3");
         CtMethod[] declaredMethods = cc.getDeclaredMethods();
 //        ClassFile cf = cc.getClassFile();
 
